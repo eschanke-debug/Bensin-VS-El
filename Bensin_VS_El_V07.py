@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+"""
+Laget av Eivind Schanke
+Forskjell på Bensin og El
+"""
+
+KM = 10000 # [KILOMETER ÅRLIG]
+D = 365 # [DAGER]
+F1 = 5000 # [FORSIKRING ELBIL]
+F2 = 7500 # [FORSIKRING BENSIN]
+TA = 8.38 # [TRAFIKKAVGIFT]
+KWHKM = 0.2  # [kWh PER KILOMETER]
+KWKR= 2  #[PRIS PER kWh]
+BKR = 1  # [BENSINPRIS PER KILOMETER]
+BAE = 0.1  # [BOMAVGIFT EL PER KILOMETER]
+BAB = 0.3 # [BOMAVGIFT BENSIN PER KILOMETER]
+KWHE = KM*KWHKM  # [kWH ÅRLIG]
+BENSIN =F2 + (D*TA) + (KM*BKR) + (KM*BAB) # [BENSIN]
+EL = F1 + (D*TA) + (KWKR*KWHE) + (KM*BAE) # [EL]
+
+print ('BENSIN = ',BENSIN)
+print ('EL = ', EL) 
+FORSKJELL = BENSIN -EL  # [FORSKJELL]
+print ('FORSKJELL =', FORSKJELL)
